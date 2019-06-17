@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+  }
+
+  html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+h2 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 62px;
+  }
