@@ -1,0 +1,50 @@
+//1.
+this = references the object that is executing the current function
+and whats equivalent in ruby is = self 
+
+//2.
+Javascript (ES5) = 
+
+function Person(first, last) { 
+    // create "constructor"
+    this.first = first;        
+    // public variables -- reference current object
+    this.last = last;
+
+    this.setName = function(first, last){ 
+        // public function
+        this.first = first;
+        this.last = last;
+    }
+}
+
+Person.prototype.fullName = function() { 
+    // extend prototype
+    return this.first + ' ' + this.last; 
+    // even at runtime!
+}
+
+var bob = new Person("Thomas", "Ochman"); 
+// "new" creates an object
+bob.fullName();               
+// "Thomas Ochman"
+
+javascript = Es2015
+
+class Person {
+
+  
+  constructor(firstName, lastName) {
+
+   
+    this.firstName = firstName;
+    this.lastName = lastName;
+
+      getFullName() {
+    return this.firstName + " " + this.lastName;
+  }
+
+}
+let bob = new Person("Thomas", "Ochman"); 
+
+console.log(bob.getFullName());
